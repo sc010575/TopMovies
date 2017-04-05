@@ -12,6 +12,8 @@ class MoviesTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var overview: UILabel!
 
+    @IBOutlet weak var movieImageIndecator: UIActivityIndicatorView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,8 +21,6 @@ class MoviesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

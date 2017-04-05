@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct Movies {
     
@@ -16,6 +16,6 @@ struct Movies {
     let overview: String
     let imageUrl: String
     let rating: Double
-
+    
 
 }

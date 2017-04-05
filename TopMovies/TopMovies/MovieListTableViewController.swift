@@ -11,6 +11,7 @@ import UIKit
 class MovieListTableViewController: UITableViewController , MoviesDownloadServiceDelegate {
     
     @IBOutlet weak var activityIndecator: UIActivityIndicatorView!
+    
     var movieLists : [Movies] = []
 
     var moviesDownload :MoviesDownload = MoviesDownload(appid: "53206ffa8c92b79f75b3ab4d7bd9f245")
@@ -20,6 +21,7 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
         super.viewDidLoad()
         moviesDownload.delegate = self
         moviesDownload.getMovies()
+        self.title = "Top twenty Movies in UK.. Enjoy.."
         
     }
 
@@ -42,6 +44,7 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let movieInfo : Movies = movieLists[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MoviesTableViewCell.self), for: indexPath)
         
@@ -51,7 +54,7 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
         
         tableViewCell.title.text = movieInfo.title
         tableViewCell.overview.text = movieInfo.overview
-        
+        self.loadImage(cell: tableViewCell, photoURL: movieInfo.imageUrl)
         return cell
     }
     
@@ -103,6 +106,34 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
     */
 
 }
+
+// MARK: - Image Loading
+
+extension MovieListTableViewController {
+    
+    func loadImage(cell: MoviesTableViewCell, photoURL: String) {
+        
+        cell.movieImageIndecator.startAnimating()
+        let imageURL  = ImageURL + photoURL
+        let url = URL(string: imageURL)
+        DispatchQueue.global(qos: .userInitiated).async {
+        
+            guard  let imageData = NSData(contentsOf: url!) else {
+                return
+            }
+            
+             DispatchQueue.main.async {
+                cell.movieImageIndecator.stopAnimating()
+                cell.imageView?.image = UIImage(data: imageData as Data)
+                cell.setNeedsLayout()
+            }
+            
+        }
+    }
+}
+
+
+// MARK: - MoviesDownloadServiceDelegate functions 
 
 extension MovieListTableViewController {
     

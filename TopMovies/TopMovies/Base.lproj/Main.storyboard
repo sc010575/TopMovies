@@ -37,6 +37,11 @@
                                                 <constraint firstAttribute="width" constant="110" id="utY-dx-Plk"/>
                                             </constraints>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dZM-cv-BR5">
+                                            <rect key="frame" x="47" y="62" width="37" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </activityIndicatorView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUc-hl-fBW">
                                             <rect key="frame" x="130" y="20" width="227" height="28"/>
                                             <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="17"/>
@@ -64,6 +69,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="movieImageIndecator" destination="dZM-cv-BR5" id="SSd-70-WhN"/>
                                     <outlet property="overview" destination="zZO-kF-qCJ" id="Bpa-Km-3iB"/>
                                     <outlet property="title" destination="rUc-hl-fBW" id="OYS-p8-hrm"/>
                                 </connections>
