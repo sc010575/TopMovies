@@ -114,7 +114,7 @@ func getMovies() {
             
             DispatchQueue.main.async {
                 
-         //       self.delegate?.setWeather()
+                self.delegate?.setMovies()
             }
             
         })
