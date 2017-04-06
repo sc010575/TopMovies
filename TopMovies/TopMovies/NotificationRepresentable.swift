@@ -1,6 +1,6 @@
 //
 //  NotificationRepresentable.swift
-//  Weather-App
+//
 //
 //  Created by Suman Chatterjee on 28/03/2017.
 //  Copyright © 2017 Suman Chatterjee. All rights reserved.
