@@ -1,5 +1,6 @@
 # TopMovies
-Fetch the top 20 most popular movies from the API
+Fetch the top 20 most popular movies in UK from the API
+
 # Project Scope
 
 Cache the API response locally on the device
@@ -11,7 +12,7 @@ Average rating
 
 # Project Structure
 
-Develop the application with Swift 3.0 and iOS 10.
+Develop the application with Swift 3.0 and iOS 10 , Xcode Version 8.1.
 When the application will start , it will fetch the Top rated Movies  from http://api.themoviedb.org/3/movie.
 
 At this moment data is cached in the memory and it show the list of movies.
