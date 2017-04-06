@@ -24,7 +24,7 @@ Show how to use existing open source libraries using Cocoapods.
 Follow Apple nativ UI/UX 
 Cover Unit tests 
 
-# Improvment 
+# Improvement 
 
 If I have some more time I can cache the data in Coredata.
 Some more Unit Testing.
