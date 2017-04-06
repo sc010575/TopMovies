@@ -14,12 +14,14 @@ class MovieListDetailViewController: UIViewController {
     @IBOutlet weak var rating: UILabel!
     
     var movieDetail : Movies? = nil
+    @IBOutlet weak var overview: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = movieDetail?.title
         self.loadImage(photoURL: (movieDetail?.imageUrl)!)
         self.rating.text = String(format:"%.1f", (movieDetail?.rating)!)
+        self.overview.text = movieDetail?.overview
     }
 
     override func didReceiveMemoryWarning() {

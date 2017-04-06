@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="161"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zvm-MW-rJP" id="uAu-ps-8mn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jzD-Mq-d1y">
@@ -109,8 +109,8 @@
                                     <constraint firstAttribute="height" constant="428" id="XXK-3k-mUO"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-PC-Lqy">
-                                <rect key="frame" x="0.0" y="469" width="183" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-PC-Lqy">
+                                <rect key="frame" x="0.0" y="443" width="183" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="183" id="Gym-Nd-MBM"/>
                                 </constraints>
@@ -119,27 +119,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dY-CS-QRs">
-                                <rect key="frame" x="191" y="469" width="56" height="52"/>
+                                <rect key="frame" x="193" y="443" width="56" height="44"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y2-Jg-TV2">
+                                <rect key="frame" x="10" y="483" width="355" height="184"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="u4F-ha-4Ow" firstAttribute="top" secondItem="OrC-PC-Lqy" secondAttribute="bottom" constant="146" id="6J8-Rq-sT1"/>
+                            <constraint firstItem="u4F-ha-4Ow" firstAttribute="top" secondItem="OrC-PC-Lqy" secondAttribute="bottom" constant="180" id="6J8-Rq-sT1"/>
                             <constraint firstItem="ITG-Lj-f5X" firstAttribute="leading" secondItem="WG7-zp-GtI" secondAttribute="leading" id="B4H-m6-14m"/>
+                            <constraint firstItem="1Y2-Jg-TV2" firstAttribute="top" secondItem="8dY-CS-QRs" secondAttribute="bottom" constant="-4" id="CHc-pG-bEb"/>
                             <constraint firstItem="OrC-PC-Lqy" firstAttribute="baseline" secondItem="8dY-CS-QRs" secondAttribute="baseline" id="CYj-SU-AAP"/>
                             <constraint firstItem="OrC-PC-Lqy" firstAttribute="firstBaseline" secondItem="8dY-CS-QRs" secondAttribute="firstBaseline" id="FFD-ht-Beh"/>
-                            <constraint firstItem="8dY-CS-QRs" firstAttribute="leading" secondItem="OrC-PC-Lqy" secondAttribute="trailing" constant="8" symbolic="YES" id="H6d-ge-2yV"/>
+                            <constraint firstItem="1Y2-Jg-TV2" firstAttribute="leading" secondItem="WG7-zp-GtI" secondAttribute="leading" constant="10" id="GDa-Te-lxx"/>
+                            <constraint firstItem="8dY-CS-QRs" firstAttribute="leading" secondItem="OrC-PC-Lqy" secondAttribute="trailing" constant="10" id="H6d-ge-2yV"/>
                             <constraint firstItem="ITG-Lj-f5X" firstAttribute="leading" secondItem="OrC-PC-Lqy" secondAttribute="leading" id="LzH-Xf-pag"/>
                             <constraint firstAttribute="trailing" secondItem="ITG-Lj-f5X" secondAttribute="trailing" id="Qgz-Ob-kOC"/>
                             <constraint firstItem="ITG-Lj-f5X" firstAttribute="top" secondItem="WG7-zp-GtI" secondAttribute="top" id="cfX-Pb-VSl"/>
-                            <constraint firstItem="8dY-CS-QRs" firstAttribute="top" secondItem="ITG-Lj-f5X" secondAttribute="bottom" constant="41" id="zL8-6B-IzB"/>
+                            <constraint firstAttribute="trailing" secondItem="1Y2-Jg-TV2" secondAttribute="trailing" constant="10" id="yVV-sR-pYw"/>
+                            <constraint firstItem="u4F-ha-4Ow" firstAttribute="top" secondItem="1Y2-Jg-TV2" secondAttribute="bottom" id="yee-6U-QQs"/>
+                            <constraint firstItem="8dY-CS-QRs" firstAttribute="top" secondItem="ITG-Lj-f5X" secondAttribute="bottom" constant="15" id="zL8-6B-IzB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="movieImageView" destination="ITG-Lj-f5X" id="Q0l-as-2OA"/>
+                        <outlet property="overview" destination="1Y2-Jg-TV2" id="0HT-Xg-9gK"/>
                         <outlet property="rating" destination="8dY-CS-QRs" id="6wd-xU-E7A"/>
                     </connections>
                 </viewController>
