@@ -165,7 +165,11 @@ extension MovieListTableViewController {
     
     func errorWithMessage(message: String) {
         
-        
+        let alert = UIAlertController(title: "Movie DB Service Error", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+       
     }
 
 }
