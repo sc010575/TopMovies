@@ -22,7 +22,7 @@ Once click it goes to the detail page, showing the overview and rating.
 
 Code is properly structured with MVC pattern.
 Show how to use existing open source libraries using Cocoapods.
-Follow Apple nativ UI/UX 
+Follow Apple native UI/UX 
 Cover Unit tests 
 
 # Improvement 
