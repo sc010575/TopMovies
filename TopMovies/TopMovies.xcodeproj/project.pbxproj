@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C534C7AD1E95D1FA00C91B97 /* MovieListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534C7AC1E95D1FA00C91B97 /* MovieListDetailViewController.swift */; };
 		C547C1A91E937F50005D6CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547C1A81E937F50005D6CE7 /* AppDelegate.swift */; };
 		C547C1AE1E937F50005D6CE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C547C1AC1E937F50005D6CE7 /* Main.storyboard */; };
 		C547C1B01E937F50005D6CE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C547C1AF1E937F50005D6CE7 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C534C7AC1E95D1FA00C91B97 /* MovieListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListDetailViewController.swift; sourceTree = "<group>"; };
 		C547C1A51E937F50005D6CE7 /* TopMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C547C1A81E937F50005D6CE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C547C1AD1E937F50005D6CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				C547C1DA1E939FB6005D6CE7 /* MovieListTableViewController.swift */,
+				C534C7AC1E95D1FA00C91B97 /* MovieListDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C534C7AD1E95D1FA00C91B97 /* MovieListDetailViewController.swift in Sources */,
 				C547C1CF1E938107005D6CE7 /* MoviesDownload.swift in Sources */,
 				C547C1DE1E94E61E005D6CE7 /* MoviesTableViewCell.swift in Sources */,
 				C547C1D61E938EA5005D6CE7 /* Movies.swift in Sources */,
@@ -488,6 +492,7 @@
 				C547C1C41E937F50005D6CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C547C1C51E937F50005D6CE7 /* Build configuration list for PBXNativeTarget "TopMoviesTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				C547C1C71E937F50005D6CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

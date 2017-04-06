@@ -16,27 +16,26 @@ protocol MoviesDownloadServiceDelegate {
 }
 
 
-
 class MoviesDownload {
-// Set  appid
-let appid: String
-var delegate: MoviesDownloadServiceDelegate?
-
-/** Initial a WeatherService instance with OpenWeatherMap app id. */
-init(appid: String) {
-    self.appid = appid
-}
-
-/** Formats an API call to the Movie DB API */
-func getMovies() {
-
-    let path = MovieURL
+    // Set  appid
+    let appid: String
+    var delegate: MoviesDownloadServiceDelegate?
     
-    getTopMoviesWithPath(path: path)
+    /** Initial a MoviesDownload instance with  app id. */
+    init(appid: String) {
+        self.appid = appid
+    }
     
-}
+    /** Formats an API call to the Movie DB API */
+    func getMovies() {
+        
+        let path = MovieURL
+        
+        getTopMoviesWithPath(path: path)
+        
+    }
     
-    /** This Method retrieves weather data from an API path. */
+    /** This Method retrieves  data from an API path. */
     func getTopMoviesWithPath(path: String) {
         // Create a URL, Session, and Data task.
         guard let  url = URL(string: path) else{
@@ -55,18 +54,18 @@ func getMovies() {
             (data, response, error) in
             
             var status = 0
-
+            
             // Handle an HTTP status response.
             if let httpResponse = response as? HTTPURLResponse {
                 print("*******")
-                print(httpResponse.statusCode)
+                //print(httpResponse.statusCode)
                 status = httpResponse.statusCode
                 print("*******")
             }
             
             // Check for nil data
             let json = JSON(data: data!)
-            print(json)
+            //print(json)
             if json == nil {
                 return
             }
@@ -102,15 +101,15 @@ func getMovies() {
         // *** This starts the data session ***
         task.resume()
     }
-
-
+    
+    
     func prepareFor (json : JSON)  {
         
         let list = json["results"].arrayObject as! [[String:Any]]
         
         MovieDbBuilder.sharedInstance.buildMovieData(for: list.count, and: json, completionhandler:{ (cancled) in
             
-            print("Download complete")
+            //print("Download complete")
             
             DispatchQueue.main.async {
                 
@@ -119,6 +118,6 @@ func getMovies() {
             
         })
     }
-
+    
     
 }

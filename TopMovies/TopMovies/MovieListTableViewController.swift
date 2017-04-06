@@ -21,7 +21,7 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
         super.viewDidLoad()
         moviesDownload.delegate = self
         moviesDownload.getMovies()
-        self.title = "Top twenty Movies in UK.. Enjoy.."
+        self.title = "Top twenty Movies in UK."
         
     }
 
@@ -130,6 +130,21 @@ extension MovieListTableViewController {
             
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MovieDetails" {
+            let nextScene =  segue.destination as! MovieListDetailViewController
+            
+            // Pass the selected object to the new view controller.
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let movieDetail = movieLists[indexPath.row]
+                nextScene.movieDetail = movieDetail
+            }
+        }
+    }
+    
+
 }
 
 
@@ -152,8 +167,5 @@ extension MovieListTableViewController {
         
         
     }
-
-    
-    
 
 }
