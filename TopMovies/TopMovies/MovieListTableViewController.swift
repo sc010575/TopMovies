@@ -20,6 +20,14 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
         
         super.viewDidLoad()
         moviesDownload.delegate = self
+        
+        if currentReachabilityStatus == .notReachable {
+            
+            self.errorWithMessage(message: "No Network Connection")
+            return
+        }
+        
+
         moviesDownload.getMovies()
         self.title = "Top twenty Movies in UK."
         
@@ -54,7 +62,7 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
         
         tableViewCell.title.text = movieInfo.title
         tableViewCell.overview.text = movieInfo.overview
-        self.loadImage(cell: tableViewCell, photoURL: movieInfo.imageUrl)
+        self.loadImage(cell: tableViewCell, photoURL: movieInfo.imageUrl , cacheKey: movieInfo.title)
         return cell
     }
     
@@ -67,9 +75,17 @@ class MovieListTableViewController: UITableViewController , MoviesDownloadServic
 
 extension MovieListTableViewController {
     
-    func loadImage(cell: MoviesTableViewCell, photoURL: String) {
+    func loadImage(cell: MoviesTableViewCell, photoURL: String ,cacheKey: String ) {
         
-        cell.movieImageIndecator.startAnimating()
+        let imageURL  = ImageURL + photoURL
+        guard let url = URL(string: imageURL) , let imageView = cell.imageView else {
+         
+            return
+        }
+        
+        MoviesDownload.loadImage(for: url, cacheKey: cacheKey, inView: imageView)
+        
+  /*      cell.movieImageIndecator.startAnimating()
         let imageURL  = ImageURL + photoURL
         let url = URL(string: imageURL)
         DispatchQueue.global(qos: .userInitiated).async {
@@ -84,7 +100,7 @@ extension MovieListTableViewController {
                 cell.setNeedsLayout()
             }
             
-        }
+        }*/
     }
     
     

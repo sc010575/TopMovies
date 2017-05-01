@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-
+import Kingfisher
 
 import UIKit
 
@@ -39,6 +39,8 @@ class MoviesDownload {
     
     /** This Method retrieves  data from an API path. */
     func getTopMoviesWithPath(path: String) {
+        
+ 
         // Create a URL, Session, and Data task.
         guard let  url = URL(string: path) else{
             
@@ -121,5 +123,13 @@ class MoviesDownload {
         })
     }
     
+}
+
+extension MoviesDownload {
     
+    class func loadImage(for url:URL, cacheKey : String , inView imageView:ImageView) {
+        
+        let resource = ImageResource(downloadURL: url, cacheKey: cacheKey)
+        imageView.kf.setImage(with: resource)
+    }
 }

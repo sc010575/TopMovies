@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13BDF386A06E956F1B850AAA /* Pods_TopMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F1B16EB9234EA468CE3148 /* Pods_TopMovies.framework */; };
+		C51A238B1EA893A3008B3224 /* NSObject+ ReachabilityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A238A1EA893A3008B3224 /* NSObject+ ReachabilityStatus.swift */; };
 		C534C7AD1E95D1FA00C91B97 /* MovieListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534C7AC1E95D1FA00C91B97 /* MovieListDetailViewController.swift */; };
 		C534C7AF1E961E3A00C91B97 /* MovieListTableVieControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534C7AE1E961E3A00C91B97 /* MovieListTableVieControllerTest.swift */; };
 		C547C1A91E937F50005D6CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547C1A81E937F50005D6CE7 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 		45F1B16EB9234EA468CE3148 /* Pods_TopMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C69FA07A54E42E674072EA4 /* Pods-TopMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopMovies/Pods-TopMovies.release.xcconfig"; sourceTree = "<group>"; };
 		9AF5AF15BE22C50B467A7D3A /* Pods-TopMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopMovies/Pods-TopMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		C51A238A1EA893A3008B3224 /* NSObject+ ReachabilityStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ ReachabilityStatus.swift"; sourceTree = "<group>"; };
 		C534C7AC1E95D1FA00C91B97 /* MovieListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListDetailViewController.swift; sourceTree = "<group>"; };
 		C534C7AE1E961E3A00C91B97 /* MovieListTableVieControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTableVieControllerTest.swift; sourceTree = "<group>"; };
 		C547C1A51E937F50005D6CE7 /* TopMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C547C1C81E937FEF005D6CE7 /* NotificationRepresentable.swift */,
+				C51A238A1EA893A3008B3224 /* NSObject+ ReachabilityStatus.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C534C7AD1E95D1FA00C91B97 /* MovieListDetailViewController.swift in Sources */,
+				C51A238B1EA893A3008B3224 /* NSObject+ ReachabilityStatus.swift in Sources */,
 				C547C1CF1E938107005D6CE7 /* MoviesDownload.swift in Sources */,
 				C547C1DE1E94E61E005D6CE7 /* MoviesTableViewCell.swift in Sources */,
 				C547C1D61E938EA5005D6CE7 /* Movies.swift in Sources */,

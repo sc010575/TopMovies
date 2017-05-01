@@ -1,7 +1,9 @@
 PODS:
+  - Kingfisher (3.6.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - Kingfisher (~> 3.0)
   - SwiftyJSON (from `https://github.com/BaiduHiDeviOS/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
@@ -15,8 +17,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
   SwiftyJSON: 6118fb49d7519c4d31a0c1f3d5af936e9047b556
 
-PODFILE CHECKSUM: 8a64e04c4de902b44c086334f10846d4d299e142
+PODFILE CHECKSUM: 85757b83739038f2e9287dc365eba7583df34496
 
 COCOAPODS: 1.2.0
